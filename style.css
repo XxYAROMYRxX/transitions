@@ -1,0 +1,187 @@
+@keyframes changeColor {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+.container {
+  padding-top: 20px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+  height: 650px;
+  width: 500px;
+  border: 3px solid black;
+}
+.container:hover {
+  padding-top: 20px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+  height: 500px;
+  width: 450px;
+  border: 3px solid black;
+  transition: width 1s, height 5s;
+}
+.circle-face {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+.circle-face:hover {
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgb(41, 27, 147);
+  border-radius: 50%;
+  transform: scale(125%);
+  transition: transform 0.5s ease;
+}
+.body {
+  width: 3px;
+  height: 150px;
+  background: black;
+  position: relative;
+  z-index: 2;
+}
+.hands {
+  width: 120px;
+  height: 3px;
+  background: black;
+  position: absolute;
+  top: 190px;
+}
+.hands:hover {
+  width: 120px;
+  height: 3px;
+  background: black;
+  position: absolute;
+  top: 190px;
+  cursor: pointer;
+  transform: rotate(395deg);
+  transition: transform 1s ease-in-out;
+}
+.body::before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 3px;
+  background: black;
+  left: -33px;
+  top: 135px;
+  rotate: 42deg;
+}
+.body::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 3px;
+  background: black;
+  left: 33px;
+  top: 135px;
+  rotate: -42deg;
+}
+.circle-face-smile {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.circle-face-smile-eyes {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.eyes-left {
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+}
+.eyes-left:hover {
+  top: 5px;
+  width: 23px;
+  height: 13px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+  background-color: aqua;
+  transition: all 1s ease-in-out;
+}
+.eyes-left::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+  background: red;
+}
+.eyes-rigth {
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+}
+.eyes-rigth:hover {
+  top: 5px;
+  width: 23px;
+  height: 13px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+  background-color: aqua;
+  transition: all 1s ease-in-out;
+}
+.eyes-rigth::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+  background: red;
+}
+.circle-nose {
+  height: 20px;
+  width: 4px;
+  background: black;
+  margin: 0 auto;
+}
+.circle-nose:hover {
+  border: 2px solid violet;
+  border-radius: 25%;
+  height: 25px;
+  width: 4px;
+  background: violet;
+  margin: 0 auto;
+  transform: scale(125%);
+  transition: all 1s ease-in-out;
+}
+.circle-mouse {
+  border: 1px solid transparent;
+  width: 80px;
+  border-bottom: 3px solid black;
+  border-bottom-left-radius: 33px;
+  border-bottom-right-radius: 27px;
+}
+.circle-mouse:hover {
+  background-color: cadetblue;
+  border: 1px solid transparent;
+  width: 80px;
+  border-bottom: 3px dashed black;
+  border-top-left-radius: 33px;
+  border-top-right-radius: 27px;
+  border-bottom-left-radius: 33px;
+  border-bottom-right-radius: 27px;
+  transform: rotate(15deg);
+  transition: all 1s ease-in-out;
+}
